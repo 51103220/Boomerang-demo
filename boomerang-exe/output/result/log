@@ -1,6 +1,6 @@
 got filename elf-init.c for main
-finding final parameters for cc
-potential param r7
-found new parameter r7
 ### WARNING: iteration limit exceeded for dfaTypeAnalysis of procedure main ###
 ### WARNING: iteration limit exceeded for dfaTypeAnalysis of procedure main ###
+type failure: no type for subexp1 of r10.m.bit7
+type failure: no type for subexp1 of r10.m
+type failure: no type for subexp1 of c.x

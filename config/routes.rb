@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post 'decompile' => 'home#decompile'
   get  'load_inputs' => 'home#load_inputs'
   get  'boomerang_toolkit' => 'home#toolkit'
+  get  'statictics' => 'home#statictics'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,29 @@
+<div class = "container">
+	<div class ="row">
+		<div class ="col-md-12 heading">
+			<h1>TESTCASE STATICTICS</h1>
+		</div>
+	</div>
+	<div class ="row">
+		<div class ="col-md-12 input-col">
+		<div class ="table-responsive">
+		 <table class="table stat_table">
+		    <thead>
+		      <tr>
+		        <th>TESTCASE</th>
+		        <th>RESULT</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		    	<% @stats.each do |s| %>
+			      <tr>
+			        <td><%=s[0]%></td>
+			        <td><%=s[1]%></td>
+			      </tr>
+		      <%end%>
+		    </tbody>
+		  </table>
+		</div>
+		</div>
+	</div>
+</div>

@@ -79,8 +79,9 @@ iframe {
 	position:fixed;
 	z-index:9999;
 	left:0%;
-	top:50%;
-	background-color: rgba(1, 1, 1, 0.1); 
+	top:40%;
+	background-color: rgba(1, 1, 1, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.2);
 	i {
 		color:rgba(1, 1, 1, 0.5); ;
 		font-size: 50px;
@@ -89,15 +90,22 @@ iframe {
 		}
 	}
 	.fa-connectdevelop {
-		border-top: 1px solid rgba(1, 1, 1, 0.5);
+		
 		padding-top: 5px;
 		font-size: 45px;
+	}
+	.fa-file-excel-o{
+		
+		padding-top: 5px;
 	}
 	&:hover{
 		background-color: rgba(1, 1, 1, 0.5); 
 	}
 	ul {
 		padding-left: 0;
+		li {
+			margin-top:5px;
+		}
 	}
 }
 @media (max-width: 768px) { 
@@ -127,4 +135,17 @@ iframe {
 	max-height: 500px;
 	overflow-y: scroll;
     overflow-x: hidden;
+}
+
+.stat_table {
+	td{
+		border-top:0px !important;
+	}
+	tbody tr{
+		background-color:rgba(1, 1, 1, 0.5);
+	}
+	
+}
+.table > thead > tr > th {
+	border-bottom:0px !important;
 }

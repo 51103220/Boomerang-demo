@@ -95,6 +95,14 @@ class HomeController < ApplicationController
     render:toolkit
   end
 
+  def statictics
+    @stats = []
+    File.readlines('statictics/stats').each do |line|
+      @stats << line.split(":")
+    end
+    render:stat
+  end
+
   def toolkit_demo
     machine = 'unknown'
     if params[:available_machine] == "SPARC"

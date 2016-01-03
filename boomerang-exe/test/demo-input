@@ -1,8 +1,6 @@
- PUBLIC bb
-bb:
-	ACALL cc
-	RET
-
-cc:
-	MOV A, R7
-	RET 
+  PUBLIC MAIN
+MAIN:
+	SETB C.7
+	MOV R1, #20
+	ADDC A, @R1 
+	RET  

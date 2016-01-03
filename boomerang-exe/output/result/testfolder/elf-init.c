@@ -1,9 +1,10 @@
 // address: 0x10474
 int main(int argc, char *argv[], char *envp[]) {
     __size8 a; 		// r8
-    __size8 r7; 		// r7
+    union { __size8 x; struct { __size8 bit1:1; __size8 bit2:1; __size8 bit3:1; __size8 bit4:1; __size8 bit5:1; __size8 bit6:1; __size8 bit7:1; __size8 bit8:1; } m; } c; 		// r10
 
-    a = cc(r7);
+    c.m.bit7 = 1;
+    a += *c.x + *(__size8 *)20;
     return a;
 }
 
