@@ -1,0 +1,12 @@
+<div class = "col-md-6 sparc">
+	<h4 class="title">SPARC</h4>
+	<ul class="list-group">
+		<% count = 0 %>
+		<% @sparc_files.each do |f| %>
+			<% name = "sparc_#{count}" %>
+			<li class ="list-group-item show-hide" name ="<%=name%>" id ='<%= "tog_sparc_#{count}"%>'>SHOW</li> 
+			<li id = "<%=name%>" class="list-group-item to-rm"><pre><code><%=f%></code></pre></li>
+			<% count = count +1  %>
+		<%end %>
+	</ul>
+</div>

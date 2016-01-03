@@ -1,0 +1,7 @@
+PUBLIC main
+main:
+	MOV DPTR, #R2 + #15H
+	MOVX A, @DPTR
+	SETB ACC.4
+	MOVX @DPTR, A
+	RET

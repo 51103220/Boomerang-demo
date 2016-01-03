@@ -1,0 +1,5 @@
+PUBLIC main
+main:
+	MOV A, #100
+	RRC A
+	RET

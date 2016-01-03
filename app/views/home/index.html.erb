@@ -1,0 +1,74 @@
+<div class = "container">
+	<div class ="row">
+		<div class ="col-md-12 heading">
+			<h1>REVERSE ENGINEERING<br>DEMO</h1>
+			<p>Thesis Presentation</p>
+		</div>
+	</div>
+	<div class ="row">
+		<div class ="col-md-6 input-col">
+			<h4 class="title">CONFIGURE</h4>
+			<%= form_tag("decompile", method: "post", remote: true, id: "decompile") do %>
+				<%=hidden_field_tag 'temp_value' %>
+				<div class = "form-group">
+					<%= radio_button_tag(:machine, "sparc") %>
+					<%= label_tag(:machine_tag, "SPARC") %>
+					<%= radio_button_tag(:machine, "_8051",true) %>
+					<%= label_tag(:machine_tag, "8051") %>
+					<%= radio_button_tag(:machine, "binary") %>
+					<%= label_tag(:machine_tag, "BINARY") %>
+				</div>
+				<div class="form-group" id = "group-machine">
+				  <label for="binary_machine">CHOOSE TESTCASE GROUP</label>
+				  <%= select_tag "binary_machine", 
+				  	"<option id = 'default_option'>-- choose group of testcases --</option>
+				  	<option>SPARC</option>
+				    <option>PENTIUM</option>
+				    <option>PPC</option>
+				    <option>TESTCASE</option>".html_safe, class: 'form-control'
+				  %>
+				</div>
+				<div class="form-group" id ="inputs_dropwdown">
+					<label for='inputs'>SELECT AVAILABLE INPUTS</label>
+					<select class='form-control' id='inputs'>
+					</select>
+				</div>
+				<div class = "form-group">
+					<%=check_box_tag 'abi', 'yes' %>
+					<%= label_tag(:abi, "ABI MODE") %>
+					
+				</div>
+				<div class ="form-group">
+					<%= text_area_tag :code, nil, size: "50x10", class: 'form-control' , required: true%>
+				</div>
+				<%= submit_tag "DECOMPILE", class: "btn btn-default"%>
+				
+			<% end %>
+		</div>
+		<div class ="col-md-6 result-col">
+			<h4 class="title">RESULT</h4>
+			<pre>
+				<code id="result"></code>
+			</pre>
+		</div>
+	</div>
+
+</div>
+<div class = "container">
+	<div class ="row">
+		<div class ="col-md-4">
+			
+		</div>
+		<div class ="col-md-4 center-block">
+			<button type="button" class="btn btn-default sample">SAMPLE</button>
+		</div>
+		<div class ="col-md-4">
+			
+		</div>
+	</div>
+	<div class = "row">
+		<%= render partial: "i8051" %>
+		<%= render partial: "sparc" %>
+	</div>
+</div>
+

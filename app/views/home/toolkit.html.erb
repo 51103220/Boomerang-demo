@@ -1,0 +1,49 @@
+<div class = "container">
+	<div class ="row">
+		<div class ="col-md-12 heading">
+			<h1>BOOMERANG TOOLKIT</h1>
+		</div>
+	</div>
+	<div class ="row">
+		<div class ="col-md-6 input-col col-md-offset-3">
+			<h4 class="title">CHOOSE MACHINE</h4>
+			<%= form_tag("toolkit_demo", method: "post", remote: true, id: "toolkit_demo") do %>
+				<div class="form-group" id = "machine">
+				  <label for="available_machine">CHOOSE AVAILABLE TEST</label>
+				  <%= select_tag "available_machine", 
+				  	"<option>SPARC</option>
+				    <option>8051</option>".html_safe, class: 'form-control'
+				  %>
+				</div>
+				<%= submit_tag "TRY", class: "btn btn-default"%>
+			<% end %>
+		</div>
+	</div>
+	<div class ="row">
+		<div class ="col-md-12 result-col limit-height">
+			<h4 class="title">SPEC</h4>
+			<pre>
+				<code id="spec"></code>
+			</pre>
+		</div>
+		
+	</div>
+	<div class ="row">
+		<div class ="col-md-12 result-col limit-height">
+			<h4 class="title">SAMPLE DECODER</h4>
+			<pre>
+				<code id="skeleton"></code>
+			</pre>
+		</div>
+	</div>
+	<div class ="row">
+		<div class ="col-md-12 result-col limit-height">
+			<h4 class="title">FINAL DECODER</h4>
+			<pre>
+				<code id="decoder"></code>
+			</pre>
+		</div>
+	</div>
+
+
+</div>

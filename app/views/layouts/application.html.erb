@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boomerang</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id = "page-wrap">
+	<%= yield %>
+</div>
+<div id = "processing"><i class="fa fa-refresh fa-spin"></i></div>
+<footer>
+	<div class= "container">
+		<div class="col-md-12 footer">
+			2016 by Dedorewan
+		</div>
+	</div>
+</footer>
+<div id ="refresh">
+	<ul>
+	<li>
+		<%= link_to root_url do %>
+		    <i class='fa fa-home'></i>
+		<% end %>
+	</li>
+	<li>
+		<%= link_to boomerang_toolkit_url do %>
+		    <i class='fa fa-connectdevelop'></i>
+		<% end %>
+	</li>
+	</ul>
+</div>
+<div id = "cover">
+	<div class ="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 id = "Welcome">THESIS DEMO</h1>
+				<p>Touch or Click the circle below</p>
+				<%=image_tag("cover.gif", width: "400", alt: "Reverse Engineering", class: "center-block")%>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<label for="file_input">CHOOSE INPUT</label>
+<select class="form-control" id="file_input">
+	<% inputs.each do |i| %>
+		<option value ="<%=inputs[:path]%>"><%=inputs[:name]%></option>
+	<%end %>
+</select>
